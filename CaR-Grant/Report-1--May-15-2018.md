@@ -88,6 +88,10 @@ non-native denominator. Adding two extra types (`MidRat`/`MidRatStr`) to
 an already populous zoo of Perl 6 numerics for such a tiny detail was hard
 for me to justify. So, after [flipping a coin](https://irclog.perlgeek.de/perl6/2018-05-16#i_16169789) to confirm my gut feeling, I decided to abandon the idea of `MidRat` and to repurpose the `Rat` type to resolve all of the issues `MidRat` were meant to resolve.
 
+The documentation and tests I wrote won't go to waste: they'll simply going
+to be repurposed to document/test the `MidRat`'s functionally to be subsumed
+by the `Rat` type.
+
 ## Going Forward
 
 I still plan on doing the Bonus Work of the grant, fixing bugs in native

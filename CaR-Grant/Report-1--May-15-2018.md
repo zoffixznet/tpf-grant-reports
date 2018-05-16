@@ -9,7 +9,7 @@ This document is the May, 2018 progress report for The Perl Foundation's [Perl 6
 This month I was working in docs and roast repos, in separate
 `car-grant-midrat` branches. So far, they contain [29 documentation commits](https://github.com/perl6/doc/compare/car-grant-midrat?expand=1#files_bucket) and [11 spec commits](https://github.com/perl6/roast/compare/master...car-grant-midrat?expand=1#files_bucket) adding about 5,824 words of documentation and 152 tests.
 
-The tests specced the `MidRat` type and the documentation, along with
+The tests specced the `MidRat` type. The documentation, along with
 documenting `MidRat`/`MidRatStr` types, centered largely around new
 [`Language/Numerics` page](https://github.com/perl6/doc/blob/car-grant-midrat/doc/Language/numerics.pod6) that describes all of the available Perl 6 numeric types—including native
 and atomic numerics—their purpose, properties, and hierarchy. This guide was

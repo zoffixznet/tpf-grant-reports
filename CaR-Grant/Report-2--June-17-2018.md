@@ -56,41 +56,30 @@ switched to the work on constants for the time being…
 
 ## Constants
 
-The work on constants is now completed and has been merged to
+The bulk of the work on constants is now completed and has been merged to
 `post-release-2018.06` branch, which will be merged to `master` after this
 month's release.
 
-I wrote XXXX spec tests, XXXX words of documents, and XXXX commits of the
-implementation.
+I wrote 200 spec tests, available in [`S04-declarations/constant-6.d.t` spec file](https://github.com/perl6/roast/blob/post-release-2018.06/S04-declarations/constant-6.d.t), about [500 words of documentation](https://github.com/perl6/doc/commit/086d7c11bda89b8505196316f3b5d11a2c27d660), and [8 commits of the implementation](https://github.com/rakudo/rakudo/pull/1935/files).
 
+Except for native types, the type constraints are now enforced on constants.
+The auto-coercive behaviour for `%-` sigilled constants was blocked by
+one tests in 6.c specification and so that behavior has been added to 6.d
+language and currently requires the use of `use v6.d.PREVIEW` pragma to enable
+(6.c behavior is to simply throw without any attempts to coerce, making
+`constant %foo = :42foo, :70bar` fail, because it's a `List`).
 
+One of the remaining things for constants is improving error reporting for unsupported constructs. Most likely I will implement support for coercers—even though they're currently not available on variables, there should be no problem with executing them during constant creation.
 
+The other remaining item is natively-typed constants. Currently, `my int const foo = 42` actually does **not** create a natively-typed constant at all. I hope the knowledge I'll gain while implementing the Grant's bonus work for support of native-typed unsigned attributes will help me in implementing the natively-typed constants as well.
 
-------------------
+## No Report for July / Further Work
 
-# Documentation
+As has been discussed with and approved by my grant manager, I plan to now
+take a month off working on this grant, so there will be no report in mid-July,
+and the next report will be in mid-August. I plan to take this time to work on resolving Rakudo's outstanding spectest issues on Windows and possibly resolving
+some of the open Issues with our community websites.
 
-The bonus deliverable "Perl 6 Numerics" Language documentation page was
-[merged to master](https://github.com/perl6/doc/compare/9e1b78a73063...ef8c8911d5e0). It describes all of the available Perl 6 numerics, their
-interactions, suitability, and hierarchy.
-
-
-
-
-
-
-========= REVIEW STUFF BELOW ===========
-
-
-## Bugs Fixed
-
-Fixed [RT#130774 `Rational.REDUCE-ME has a data race`](https://rt.perl.org/Ticket/Display.html?id=130774)
-
-## Commits
-
-### Rakudo
-https://github.com/rakudo/rakudo/commit/6dd20588b6dfb75
-https://github.com/rakudo/rakudo/commit/22724c0eee
-
-### Roast
-https://github.com/perl6/roast/commit/1d10e9dc12
+After that period, I will resume working on the grant, finishing the
+remaining work on constants, and then going back to Rationals, and finally
+finishing the bonus work with the natively-typed entities.

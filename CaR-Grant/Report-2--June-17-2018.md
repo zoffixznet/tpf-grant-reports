@@ -10,7 +10,7 @@ The bonus deliverable "Perl 6 Numerics" Language documentation page was
 [merged to master](https://github.com/perl6/doc/compare/9e1b78a73063...ef8c8911d5e0). [It describes](https://docs.perl6.org/language/numerics) all of the available Perl 6 numerics, their
 interactions, suitability, and hierarchy.
 
-The bulk of work on constants also has been merged to `post-release-2018.06` branch, which will be merged to `master` after this month's release.
+The bulk of work on constants also [has been merged](https://github.com/rakudo/rakudo/pull/1935/files) to `post-release-2018.06` branch, which will be merged to `master` after this month's release.
 
 ## Rationals
 

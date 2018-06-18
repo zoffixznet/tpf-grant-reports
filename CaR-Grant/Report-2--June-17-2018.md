@@ -19,8 +19,8 @@ pieces of work that currently reside in
 [`car-grant-unreduce` branch](https://github.com/rakudo/rakudo/compare/car-grant-unreduce)
 
 1. Fixing the rare data race and doing some optimizations
-2. Fixing bad math in some ops with Zero-Denominator Rationals
-3. Attempting a trial implementation where Zero-Denominator Rationals (ZDRs) are
+2. Fixing bad math in some ops with Zero-Denominator Rationals (ZDRs)
+3. Attempting a trial implementation where ZDRs are
     marked with a role, allowing us to improve performance of some operators.
 
 The (1) was successful and even resulted in ability to optimize some ops

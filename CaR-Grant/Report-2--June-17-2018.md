@@ -67,7 +67,7 @@ I wrote 200 spec tests, available in [`S04-declarations/constant-6.d.t` spec fil
 
 Except for native types, the type constraints are now enforced on constants.
 The auto-coercive behaviour for `%-` sigilled constants was blocked by
-one tests in 6.c specification and so that behavior has been added to 6.d
+one test in 6.c specification and so that behavior has been added to 6.d
 language and currently requires the use of `use v6.d.PREVIEW` pragma to enable
 (6.c behavior is to simply throw without any attempts to coerce, making
 `constant %foo = :42foo, :70bar` fail, because it's a `List`).

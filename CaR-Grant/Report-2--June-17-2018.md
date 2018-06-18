@@ -29,7 +29,7 @@ creation of `Rational`s 19% faster and argless `Rational.round` 4.7x faster
 (used by `.Str` and `.base`).
 
 The plan for (2) was to try normalization to `<1/0>`, `<0/0>`, `<-1/0>` and
-the hope was that alone would fix all math problems, but some still remained.
+the hope was that alone would fix all math problems. However, after that change some issues still remained.
 Also, doing this normalization created a new problem where code like
 `say 42 / 0` would throw an Exception with message `"division of 1 by 0 attempted"` which is quite confusing for users who did not internalize that
 `/` op with `Int` objects is really just a `Rat` constructor. The 6.c spec

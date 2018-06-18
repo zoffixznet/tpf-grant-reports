@@ -36,7 +36,7 @@ Also, doing this normalization created a new problem where code like
 actually covers this exact scenario and expects the thrown `Exception` to
 report value `42` for numerator, thus blocking this change.
 
-The first attempt at (3) ended with dead-end.
+The first attempt at (3) ended with a dead-end.
 Marking ZDRs with a role created an extra dispatch ambiguity with some
 operators like `cmp`. We already had to disambiguate that op
 with `is default` marker to disambiguate between `Rational` and `Real`

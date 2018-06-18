@@ -23,10 +23,9 @@ pieces of work that currently reside in
 3. Attempting a trial implementation where ZDRs are
     marked with a role, allowing us to improve performance of some operators.
 
-The (1) was successful and even resulted in ability to optimize some ops
-that weren't foreseen in original work proposal: `==` was made 28% faster
-and `===` was made 52% faster. I also made creation of
-`Rational`s 19% faster and argless `Rational.round` 4.7x faster
+The (1) was successful and I already was able to optimized some
+ops due to Rationals being always reduced now: `==` was made 28% faster and `===` was made 52% faster. I also made
+creation of `Rational`s 19% faster and argless `Rational.round` 4.7x faster
 (used by `.Str` and `.base`).
 
 The plan for (2) was to try normalization to `<1/0>`, `<0/0>`, `<-1/0>` and
